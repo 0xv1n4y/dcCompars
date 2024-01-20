@@ -6,7 +6,9 @@ import { faCartShopping, faBars } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-    const [menu, setMenu] = useState("home");
+    const pathName = window.location.pathname.split("/")[1]
+   
+    const [menu, setMenu] = useState(pathName ? pathName : 'home');
     const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
 
     const toggleMobileMenu = () => {
@@ -21,6 +23,7 @@ const Navbar = () => {
             <div className="bars" onClick={toggleMobileMenu}>
                 <FontAwesomeIcon icon={faBars} />
             </div>
+
             <ul className={`nav-links ${mobileMenuVisible ? 'show' : ''}`}>
                 <li onClick={() => { setMenu("home") }}>
                     <Link to='/' className={`pages ${menu === "home" ? 'active-page' : ''}`}>Home</Link>
@@ -28,8 +31,8 @@ const Navbar = () => {
                 <li onClick={() => { setMenu("shop") }}>
                     <Link to='/shop' className={`pages ${menu === "shop" ? 'active-page' : ''}`}>Shop</Link>
                 </li>
-                <li onClick={() => { setMenu("blog") }}>
-                    <Link to='/blog' className={`pages ${menu === "blog" ? 'active-page' : ''}`}>Blog</Link>
+                <li onClick={() => { setMenu("themes") }}>
+                    <Link to='/themes' className={`pages ${menu === "themes" ? 'active-page' : ''}`}>Themes</Link>
                 </li>
                 <li onClick={() => { setMenu("about") }}>
                     <Link to='/about' className={`pages ${menu === "about" ? 'active-page' : ''}`}>About</Link>

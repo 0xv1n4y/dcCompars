@@ -69,7 +69,7 @@ body {
 }
 
 .nav-logo img {
-    width: 300px;
+    width: 180px;
 }
 
 .bars {
@@ -125,7 +125,7 @@ body {
 .nav-links li .pages {
     text-decoration: none;
     color: #1a1a1a;
-    font-size: 22px;
+    font-size: 17px;
     font-weight: 600;
     position: relative;
     transition: 0.5s ease;
@@ -133,14 +133,6 @@ body {
 
 
 
-.nav-links li .pages {
-    text-decoration: none;
-    color: #1a1a1a;
-    font-size: 22px;
-    font-weight: 600;
-    position: relative;
-    transition: 0.5s ease;
-}
 
 .nav-links li .pages::after {
     content: "";

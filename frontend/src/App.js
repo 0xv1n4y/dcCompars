@@ -3,12 +3,12 @@ import Navbar from "./Components/Navbar/Navbar";
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './Pages/Home';
 import Shop from "./Pages/Shop";
-import Blog from "./Pages/Blog";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Cart from "./Pages/Cart";
 import Footer from "./Components/Footer/Footer";
 import LoginSignup from "./Pages/LoginSignup";
+import Themes from "./Pages/Themes";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/themes" element={<Themes />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<LoginSignup />} />
